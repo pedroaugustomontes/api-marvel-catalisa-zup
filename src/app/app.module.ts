@@ -12,17 +12,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CharacterComponent } from './characters/character/character.component';
 import { CharactersComponent } from './characters/characters.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CharacterComponent,
-    CharactersComponent
+    CharactersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

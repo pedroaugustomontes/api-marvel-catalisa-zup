@@ -11,7 +11,7 @@ export class CharactersApiService {
   HASH = '9377cebee3a0bd9de8c564ef55ad574b';
   TIME_STAMP = '1602101033';
   URL_API = `https://gateway.marvel.com/v1/public/characters?orderBy=-modified&limit=100&ts=${this.TIME_STAMP}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
-  // ?orderBy=modified&limit=100&
+
   constructor(private http: HttpClient) {}
 
   getAllCharacters(): Observable<any> {
