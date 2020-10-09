@@ -1,4 +1,4 @@
-import { CharactersApiService } from './character/shared/characters-api.service';
+import { CharactersApiService } from './../../services/shared/characters-api.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
