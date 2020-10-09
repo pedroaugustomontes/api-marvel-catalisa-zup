@@ -1,0 +1,23 @@
+.div-card {
+  padding: 10px;
+}
+
+img.mat-card-image {
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.mat-card-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.mat-card-content {
+  text-align: center;
+
+}
+
+.mat-card-content button {
+  max-width: 100%;
+  /* margin-bottom: 16px; */
+}

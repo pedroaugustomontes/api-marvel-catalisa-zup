@@ -1,0 +1,27 @@
+<main fxFlex fxLayout="column">
+  <div fxLayout="row wrap">
+    <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let character of allCharacters | async" class="div-card">
+
+      <mat-card>
+        <img *ngIf="true" mat-card-image src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="O herói da Marvel chamado {{character.name}}">
+        <mat-card-title>
+          {{character.name}}
+        </mat-card-title>
+
+        <mat-card-content *ngIf="character.description.length > 0">
+          <button data-message="Botão para mostrar ou esconder descrição do herói, se houver." mat-stroked-button color="warn"(click)="show = !show">{{show ? 'Mostrar Descrição' : 'Esconder Descrição'}}</button>
+          <br>
+          <div *ngIf="show; else elseBlock"></div>
+          <ng-template #elseBlock>{{character.description}}</ng-template>
+        </mat-card-content>
+
+        <mat-card-footer>
+          <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="warn" alt="Link Externo para detalhes no site da Marvel">
+            Saiba Mais Detalhes
+          </a>
+        </mat-card-footer>
+      </mat-card>
+
+    </div>
+  </div>
+</main>
